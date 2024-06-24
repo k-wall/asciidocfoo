@@ -12,4 +12,4 @@ jobs:
         with:
           source_dir: docs/
           asciidoctor_params: "--require asciidoctor-diagram --attribute=sectlinks --attribute=sectanchors"
-          git_commit_signoff: false
+          #git_commit_signoff: false
