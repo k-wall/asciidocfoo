@@ -8,7 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: asciidoctor-ghpages
-        uses: k-wall/asciidoctor-ghpages-action@2937242409c0c8c0db639bde63ed1528bad067c8
+        uses: k-wall/asciidoctor-ghpages-action@7ecec2d029e3040a73c30634dfc2c0a2eb85479b
         with:
           source_dir: docs/
           asciidoctor_params: "--require asciidoctor-diagram --attribute=sectlinks --attribute=sectanchors"
+          git_commit_signoff: true
