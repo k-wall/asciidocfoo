@@ -12,3 +12,4 @@ Use it to try https://asciidoc.org[AsciiDoc].
 ----
 puts 'Hello, World!'
 ----
+.
