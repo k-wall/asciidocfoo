@@ -1,0 +1,17 @@
+name: GitHub Pages Publish
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: asciidoctor-ghpages
+        uses: manoelcampos/asciidoctor-ghpages-action@v2
+        with:
+          source_dir: docs/
+          asciidoctor_params: "--require asciidoctor-diagram --attribute=sectlinks --attribute=sectanchors"
+          post_build: 'find . -name "*.svg" -exec git add -f {} \;'
